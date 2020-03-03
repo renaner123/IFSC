@@ -95,3 +95,4 @@ class CRC16:
         '''Verifica o valor de FCS contido nos dados armazenados no buffer interno'''
         fcs = self.calculate()
         return fcs == self.GOODFCS#
+    
