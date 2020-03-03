@@ -7,3 +7,4 @@ if __name__ == "__main__":
     tun = Tun("tun1","10.0.0.2","10.0.0.1",mask="255.255.255.252",mtu=1500,qlen=4)
 
     Projeto = Layer_Use(ser,tun,0)
+    
