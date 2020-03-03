@@ -4,7 +4,5 @@
 + [CoAP](Coap) - Protocolo de comunicando seguindo RFC 7252
 + [Protocolo](Protocolo) - Protocolo de comunicação ponto a ponto
 
-[Home](..) - Voltar a página inicial
-
 
 
