@@ -32,3 +32,4 @@ sched = poller.Poller()#
 sched.adiciona(cb)
 
 sched.despache()
+
