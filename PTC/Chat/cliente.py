@@ -71,6 +71,7 @@ if __name__ == '__main__':
    processo.start()                                   #inicia a Thread
 
    msg = input()
+   
 
    while True:
        send.put(msg)
