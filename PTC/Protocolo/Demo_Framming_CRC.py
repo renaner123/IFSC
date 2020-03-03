@@ -22,6 +22,7 @@ print("Mensagem enquadrada: ", cb.temp[0:len(cb.temp)])
 
 
 
+
     
     
 
