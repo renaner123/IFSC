@@ -63,6 +63,7 @@ class COAP(poller.Callback):
         self.cont = 0
         self.Atual_Timeout_Ack = 2
         self.Periodo = 0
+        
     
     
     def handle(self):
