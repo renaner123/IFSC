@@ -11,6 +11,7 @@ import crc
 import pydoc
 
 
+
 class Session_Manager(poller.Layer):
     ''' Camada responsável por contruir camada de Gerenciamento de Sessão
 
