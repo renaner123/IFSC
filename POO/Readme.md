@@ -7,7 +7,7 @@
 
 ## Listas
 
-* [Lista 01](Lista-01) - Sistema de Controle de Versão
+* [Lista 01](Listas/lista-01) - Sistema de Controle de Versão
 
 
 
