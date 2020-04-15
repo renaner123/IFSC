@@ -9,5 +9,15 @@
 
 * [Lista 01](Listas/lista-01) - Sistema de Controle de Versão
 
+* [Lista 02](Listas/lista-02) - Introdução a linguagem Java
+
+* [Lista 03](Listas/lista-03) - Modelagem de classes
+
+* [Lista 04](Listas/lista-04) - Construtor, modificadores de acesso e palavras reservadas
+
+* [Lista 05](Listas/lista-05) - Modelagem de classes com associação
+
+* [Projeto 01](Projetos/Projeto1) - Gerador de calendários iCalendar
+
 
 
