@@ -10,4 +10,6 @@ controle de uma receita. Esta pode ser de uma cervejaria artesanal, por exemplo.
 + ## Execução/demonstração da parte manual
     ![](Manual.gif)
 
-
++ ## Máquina de estado
+![State](State_machine.png)
+	
