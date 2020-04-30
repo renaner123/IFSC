@@ -1,8 +1,3 @@
-/*
-  Projeto - Temômetro LCD com sensor LM35 e Arduino
-  By - Zedequias Fonseca  -  08/2014
-  http://vfeletronica.blogspot.com.br
-*/
 #include <stdint.h>
 #include <LiquidCrystal.h> // Biblioteca para o LCD
 #define TEMPORECEITA A
