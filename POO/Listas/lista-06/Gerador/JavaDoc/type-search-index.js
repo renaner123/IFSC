@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"poo","l":"Article"},{"p":"poo","l":"BibTex"},{"p":"poo","l":"BibTexTest"},{"p":"poo","l":"Book"},{"p":"poo","l":"Entrada"},{"p":"poo","l":"Masterthesis"},{"p":"poo","l":"Misc"},{"p":"poo","l":"Principal"},{"p":"poo","l":"Techreport"}]
