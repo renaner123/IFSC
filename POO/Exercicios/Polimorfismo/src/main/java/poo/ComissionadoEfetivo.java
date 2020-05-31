@@ -2,7 +2,7 @@ package poo;
 
 public class ComissionadoEfetivo extends Comissionado
 {
-
+//
     public double salarioBaseComissionado = 1000; //
 
     public ComissionadoEfetivo(String nome, String sobrenome, String numeroSeguroSocial, String cpf, double vendas, double comissao) {
