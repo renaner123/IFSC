@@ -21,4 +21,11 @@ public class ComissionadoEfetivo extends Comissionado
 
     }
 
+    public double getSalarioBaseComissionado() {
+        return salarioBaseComissionado;
+    }
+
+    public void setSalarioBaseComissionado(double salarioBaseComissionado) {
+        this.salarioBaseComissionado = salarioBaseComissionado;
+    }
 }
