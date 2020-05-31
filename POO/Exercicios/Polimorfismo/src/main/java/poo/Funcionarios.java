@@ -7,7 +7,7 @@ public abstract class Funcionarios
     private String numeroSeguroSocial;
     private String cpf;
     public final double salarioFixoMensal = 2000.00;
-
+//
     public Funcionarios(){};
 
     public Funcionarios(String nome, String sobrenome, String numeroSeguroSocial, String cpf) {
