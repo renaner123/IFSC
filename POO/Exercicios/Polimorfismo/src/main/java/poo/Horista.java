@@ -1,7 +1,5 @@
 package poo;
 
-// Figura 10.6: FuncionarioHora.java
-// Classe FuncionarioHora estende Funcionario.
 
 public class Horista extends Funcionarios
 {
