@@ -6,7 +6,7 @@ public class Comissionado extends Funcionarios
     protected double comissao; // porcentagem da comissão
 
 
-
+//
     public Comissionado(String nome, String sobrenome, String numeroSeguroSocial, String cpf, double vendas, double comissao) {
         super(nome, sobrenome, numeroSeguroSocial, cpf);
         this.vendas = vendas;

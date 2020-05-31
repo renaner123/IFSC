@@ -13,7 +13,7 @@ public class Horista extends Funcionarios
         this.valorHora = salarioHora;
         this.horas = horas;
     }
-
+//
     @Override
     public double calculaSalario() {
         return salarioFixoMensal + (this.valorHora *horas);
