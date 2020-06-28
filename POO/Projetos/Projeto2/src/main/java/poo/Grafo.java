@@ -132,17 +132,21 @@ public class Grafo {
 
     public boolean validarRestricoes(){
         for (Node auxNode : nos) {
-            System.out.println(auxNode.getNomeNode() + " " + auxNode.getContRestricao());
-          //  if((auxNode.getContRestricao()>=auxNode.getMinAssociacao() && auxNode.getContRestricao() <= auxNode.getMaxAssociacao())){
-            //    continue;
-            //}
-            //else return false;
+            System.out.println(auxNode.getNomeNode() + " " +auxNode.getContRestricao());
+            if(auxNode.getContRestricao()!=0) {
+                if ((auxNode.getContRestricao() >= auxNode.getMinAssociacao() && auxNode.getContRestricao() <= auxNode.getMaxAssociacao())) {
+                    continue;
+                }else{
+                    return false;
+                }
+            }
         }
         return true;
     }
 
     public void nodeOrigemToDestino(String nodeOrigem, String... nodesDestinos) {
         ArrayList<String> destinos = new ArrayList<>();
+        //Precisa verificar se o destino é valido
         if (nodesDestinos.length > 1) {
             for (int i = 0; i < nodesDestinos.length; i++) {
                 destinos.add(nodesDestinos[i]);
@@ -151,7 +155,13 @@ public class Grafo {
             destinos.add(nodesDestinos[0]);
         }
         for (Node auxNode : nos) {
-            if(auxNode.getNomeNode().equals(nodeOrigem)) auxNode.setContRestricao(destinos.size());
+            if(auxNode.getNomeNode().equals(nodeOrigem)) {
+                if (auxNode.getArcos().size()>=1){
+                    auxNode.setContRestricao(auxNode.getArcos().size()+destinos.size());
+                }else {
+                    auxNode.setContRestricao(destinos.size());
+                }
+            }
             for(String aux : destinos){
                 if(auxNode.getNomeNode().equals(aux)){
                     auxNode.setContRestricao(auxNode.getContRestricao()+1);

@@ -17,7 +17,7 @@ public class Principal {
         inserir.addNode("Internet",EnumNodeNames.wan);
         inserir.addNode("roteador",EnumNodeNames.router);
         inserir.addNode("switch",EnumNodeNames.sw);
-        inserir.addNode("WWW Server",EnumNodeNames.server);
+        inserir.addNode("Firewall WWW",EnumNodeNames.firewall);
 
         //inserir.mostrarNodesSalvos();
 
@@ -32,7 +32,10 @@ public class Principal {
 //    sw1 -- serverWWW
 //    sw1 -- {desktop1 desktop2 desktop3} 1 ou N
 
-        inserir.nodeOrigemToDestino("router1","sw1","desktop1");
+        inserir.nodeOrigemToDestino("router1","sw1","firewall1");
+        inserir.nodeOrigemToDestino("desktop1","firewall1");
+        inserir.nodeOrigemToDestino("sw1","desktop1");
+        //inserir.nodeOrigemToDestino("sw1","desktop1");
 
 
 

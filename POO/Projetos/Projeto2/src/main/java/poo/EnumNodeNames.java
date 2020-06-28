@@ -17,6 +17,15 @@ public enum EnumNodeNames {
         }
         throw new IllegalArgumentException("ćodigo inv́alido");
     }
+    public static boolean checkValue(String value){
+        for(EnumNodeNames aux : EnumNodeNames.values()){
+            if(aux.equals(value)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 
 }
