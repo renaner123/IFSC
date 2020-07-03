@@ -1,10 +1,13 @@
 package poo;
 
-
+import java.io.Serializable;
 import java.util.*;
+/**
+ * Classe responsável por gerar um grafo
+ * @author Renan Rodolfo da Silva
+ */
 
-
-public class Grafo {
+public class Grafo implements Serializable{
 
     private static final String LABELLOCPADRAOGRAFO = "t";
     private static final String RANKDIRPADRAO = "TB";
@@ -13,18 +16,29 @@ public class Grafo {
     private String labelLoc;
     private String 	rankdir;
     private int fontSize =0;
-
     private Node node;
-    private SubGrafo subGrafo;
     private ArrayList<Node> nos = new ArrayList<>();
     private ArrayList<SubGrafo> subGraph = new ArrayList<>();
 
+    /**
+     *
+     * @param label utilizado no grafo para identificação
+     */
     public Grafo(String label) {
         this.label = label;
         this.labelLoc = LABELLOCPADRAOGRAFO;
         this.rankdir = RANKDIRPADRAO;
     }
 
+    public Grafo(){
+
+    }
+
+    /**
+     *
+     * @param label do nó a sers criado
+     * @param tipo do nó a ser criado, de acordo com a EnumNodeNames
+     */
     public void addNode(String label, EnumNodeNames tipo){
         switch(tipo){
             case wan:
@@ -53,105 +67,223 @@ public class Grafo {
 
     }
 
-    public void addSubGrafo(String label, String... nodes){
-        subGraph.add(new SubGrafo(label,nodes));
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public String getLabelLoc() {
-        return labelLoc;
-    }
-
-    public String getRankdir() {
-        return rankdir;
-    }
-
-    public void setRankdir(String rankdir) {
-        this.rankdir = rankdir;
-    }
-
-    public void setLabelLoc(String labelLoc) {
-        this.labelLoc = labelLoc;
-    }
-
-    public ArrayList<Node> getNos() {
-        return nos;
-    }
-
-    public static String getLABELLOCPADRAOGRAFO() {
-        return LABELLOCPADRAOGRAFO;
-    }
-
-    public static String getRANKDIRPADRAO() {
-        return RANKDIRPADRAO;
-    }
-
-    public int getFontSize() {
-        return fontSize;
-    }
-
-    public void setFontSize(int fontSize) {
-        this.fontSize = fontSize;
-    }
-
-    public ArrayList<SubGrafo> getSubGraph() {
-        return subGraph;
-    }
-
-    public void setSubGraph(ArrayList<SubGrafo> subGraph) {
-        this.subGraph = subGraph;
-    }
-
-    public SubGrafo getSubGrafo() {
-        return subGrafo;
-    }
-
-    public void mostrarNodesSalvos(){
-        for(Node aux : this.nos){
-            System.out.println(aux.getNomeNode() + " label="+aux.getLabel());
-        }
-    }
-
-
-//    O nó endpoint (desktop, câmera IP, servidor) poderá estar associado a no máximo a um outro nó
-//    O nó roteador poderá estar associado com 2 ou N outros nós
-//    O nó firewall poderá estar associado com 2 ou N outros nós
-//    O nó switch (comutador) poderá estar associado com 1 ou N outros nós
-//    O nó Internet poderá estar associado com 1 ou N outros nós
-//    wan -- router
-//    router -- sw1
-//    sw1 -- serverWWW
-//    sw1 -- {desktop1 desktop2 desktop3} 1 ou N
-
-    public boolean validarRestricoes(){
-        for (Node auxNode : nos) {
-            if((auxNode.getContRestricao()>=auxNode.getMinAssociacao() && auxNode.getContRestricao() <= auxNode.getMaxAssociacao())){
-                continue;
+    /**
+     *
+     * @param label para identificar o subgrafo
+     * @param nodes nós que estarão no subgrafo
+     * @return true se conseguir criar o subgrafo
+     */
+    public boolean addSubGrafo(String label, String... nodes){
+        if (nodes.length > 1) {
+            for (int i = 0; i < nodes.length; i++) {
+                if (verificaNodeExiste(nodes[i]));
+                else return false;
             }
-            else return false;
+            subGraph.add(new SubGrafo(label, nodes));
+        }else{
+            if (verificaNodeExiste(nodes[0])) subGraph.add(new SubGrafo(label, nodes));
         }
         return true;
     }
 
-    public void nodeOrigemToDestino(String nodeOrigem, String... nodesDestinos) {
+    /**
+     *
+     * @return label do grafo
+     */
+    public String getLabel() {
+        return label;
+    }
+    /**
+     *
+     * @param label altera o label
+     */
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    /**
+     *
+     * @return labelLoc do grafo
+     */
+    public String getLabelLoc() {
+        return labelLoc;
+    }
+
+    /**
+     *
+     * @return rankdir do grafo
+     */
+    public String getRankdir() {
+        return rankdir;
+    }
+
+    /**
+     *
+     * @param rankdir altera rankdir do grafo
+     */
+    public void setRankdir(String rankdir) {
+        this.rankdir = rankdir;
+    }
+
+    /**
+     *
+     * @param labelLoc altera labelloc do grafo
+     */
+    public void setLabelLoc(String labelLoc) {
+        this.labelLoc = labelLoc;
+    }
+
+    /**
+     *
+     * @return lista com todos os nós criados
+     */
+    public ArrayList<Node> getNos() {
+        return nos;
+    }
+
+    /**
+     *
+     * @return labelloc padrão do grafo
+     */
+    public static String getLABELLOCPADRAOGRAFO() {
+        return LABELLOCPADRAOGRAFO;
+    }
+
+    /**
+     *
+     * @return rankdir padrão do grafo
+     */
+    public static String getRANKDIRPADRAO() {
+        return RANKDIRPADRAO;
+    }
+
+    /**
+     *
+     * @return a fontsize do grafo
+     */
+    public int getFontSize() {
+        return fontSize;
+    }
+
+    /**
+     *
+     * @param fontSize altera a fontsize
+     */
+    public void setFontSize(int fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    /**
+     *
+     * @return os subgrafos criados
+     */
+    public ArrayList<SubGrafo> getSubGraph() {
+        return subGraph;
+    }
+
+    /**
+     *
+     * @param subGraph recebe lista de subgrafo
+     */
+    public void setSubGraph(ArrayList<SubGrafo> subGraph) {
+        this.subGraph = subGraph;
+    }
+
+    /**
+     *
+     * @param nomeNode nome do nó a ser removido de nos
+     * @return true se conseguir remover, caso contrário false
+     */
+    public boolean removerNode(String nomeNode){
+        Iterator<Node> iteracao = nos.iterator();
+        while(iteracao.hasNext()){
+            Node elemento = iteracao.next();
+            if (elemento.getNomeNode().equals(nomeNode)){
+                iteracao.remove();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param labelSubGrafo label do subgrafo a ser removido
+     * @return true se conseguir remover, caso contrário false
+     */
+    public boolean removerSubGrafo(String labelSubGrafo){
+        Iterator<SubGrafo> iteracao = subGraph.iterator();
+        while(iteracao.hasNext()){
+            SubGrafo elemento = iteracao.next();
+            if (elemento.getLabel().equals(labelSubGrafo)){
+                iteracao.remove();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * imprime na tela o nome interno dos nós criados
+     */
+    public void mostrarNodesSalvos(){
+        for(Node aux : this.nos){
+            System.out.println("Nó com label= \'"+aux.getLabel() + "\' possui nome intero ="+aux.getNomeNode());
+        }
+    }
+
+    /**
+     *
+     * @return true caso todos os nós atendam a suas restrições, caso contrário retorna false
+     */
+    public boolean validarRestricoes(){
+        if(getNos().size()!=0){
+            for (Node auxNode : nos) {
+                if (auxNode.getContRestricao() != 0) {
+                    if ((auxNode.getContRestricao() >= auxNode.getMinAssociacao() && auxNode.getContRestricao() <= auxNode.getMaxAssociacao())) {
+                        continue;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }else{
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     *
+     * @param nodeOrigem recebe nó de origem
+     * @param nodesDestinos recebe nó(s) de destino para gerar um arco
+     * @return true os nós existam, caso contrário retorna false
+     */
+    public boolean addNodeOrigemToDestino(String nodeOrigem, String... nodesDestinos) {
         ArrayList<String> destinos = new ArrayList<>();
+        //Precisa verificar se o destino é valido
 
         if (nodesDestinos.length > 1) {
             for (int i = 0; i < nodesDestinos.length; i++) {
-                destinos.add(nodesDestinos[i]);
+                if(verificaNodeExiste(nodesDestinos[i])) destinos.add(nodesDestinos[i]);
+                else return false;
             }
         } else {
-            destinos.add(nodesDestinos[0]);
+            if(verificaNodeExiste(nodesDestinos[0]))destinos.add(nodesDestinos[0]);
+            else{
+                return false;
+            }
         }
+
         for (Node auxNode : nos) {
-            if(auxNode.getNomeNode().equals(nodeOrigem)) auxNode.setContRestricao(auxNode.getContRestricao()+1);
+            if(auxNode.getNomeNode().equals(nodeOrigem)) {
+                //se o node for o nome do nodeOrigem, incrementa a restricao de acordo com tamanho da lista de destinos + o que já tem
+                if (auxNode.getArcos().size()>=1){
+                    auxNode.setContRestricao(auxNode.getArcos().size()+destinos.size());
+                }else {
+                    auxNode.setContRestricao(destinos.size());
+                }
+            }
             for(String aux : destinos){
                 if(auxNode.getNomeNode().equals(aux)){
                     auxNode.setContRestricao(auxNode.getContRestricao()+1);
@@ -163,46 +295,14 @@ public class Grafo {
                 addList(destinos, auxNode);
             }
         }
+        return true;
     }
 
-//    public boolean nodeOrigemToDestino(String nodeOrigem, String... nodesDestinos) {
-//        ArrayList<String> destinos = new ArrayList<>();
-//
-//        if (nodesDestinos.length > 1) {
-//            for (int i = 0; i < nodesDestinos.length; i++) {
-//                destinos.add(nodesDestinos[i]);
-//            }
-//        } else {
-//            destinos.add(nodesDestinos[0]);
-//        }
-//        for (Node auxNode : nos) {
-//            if(auxNode.getNomeNode().equals(nodeOrigem)) auxNode.setContRestricao(auxNode.getContRestricao()+1);
-//            for(String aux : destinos){
-//                if(auxNode.getNomeNode().equals(aux)){
-//                    auxNode.setContRestricao(auxNode.getContRestricao()+1);
-//                }
-//            }
-//        }
-//        for (Node auxNode : nos) {
-//            //verifica se node atual atende a restrição
-//            if((auxNode.getContRestricao()>=auxNode.getMinAssociacao() && auxNode.getContRestricao() <= auxNode.getMaxAssociacao()) && auxNode.getNomeNode().equals(nodeOrigem)) {
-//                //verifica se os arcos do node atendem a restricao
-//                for (Node auxNode2 : nos) {
-//                    for(String aux : destinos){
-//                        if(auxNode2.getNomeNode().equals(aux)){
-//                            if((auxNode2.getContRestricao()>=auxNode2.getMinAssociacao() && auxNode2.getContRestricao() <= auxNode2.getMaxAssociacao())){
-//                                addList(destinos,auxNode);
-//                                return true;
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        return false;
-//    }
-//
-
+    /**
+     * método interno para adicionar nodes
+     * @param destinos recebe nodes de destino a serem inseridos no nó
+     * @param auxNode node que terá os arcos
+     */
     private void addList(ArrayList<String> destinos, Node auxNode) {
         if (auxNode.getArcos().size() >= 1) {
             ArrayList<String> resultArray = new ArrayList<>(auxNode.getArcos().size() + destinos.size());
@@ -214,19 +314,33 @@ public class Grafo {
         }
     }
 
-    // Gera uma String contendo os Arcos entre os nós do Grafo
+    /**
+     *
+     * @return todos os arcos criados
+     */
     public String arcosEntreNosdoGrafo(){
         String toReturn="";
         for(Node aux : nos) {
-            if(aux.getArcos().size()>=1) {
-                toReturn += "" +
-                        "\t" + aux.getNomeNode() + " -- " + aux.getArcos().toString().replace(",", "").replace("[", "{").replace("]", "}") + "\n" +
-                        "";
-            }
+                if(aux.getArcos().size()>=1) {
+                    if(!aux.getColorArco().isEmpty()){
+                        toReturn += "" +
+                                "\t" + aux.getNomeNode() + " -- " + aux.getArcos().toString().replace(",", "").replace("[", "{").replace("]", "}") +" [color=" + aux.getColorArco() + "]"+"\n" +
+                                "";
+                    }else{
+                        toReturn += "" +
+                                "\t" + aux.getNomeNode() + " -- " + aux.getArcos().toString().replace(",", "").replace("[", "{").replace("]", "}") +"\n" +
+                                "";
+                    }
+
+                }
         }
         return toReturn;
     }
-    //Gera uma String com todos os nós do grafo
+
+    /**
+     *
+     * @return todos os nós criados
+     */
     private String nosDoGrafro(){
         String toReturn="";
         for(Node aux : nos) {
@@ -234,16 +348,27 @@ public class Grafo {
         }
         return toReturn;
     }
-    //Padrao para montar um Grafo
+
+    /**
+     * método interno
+     * @return o padrão do grafo a ser gerador no diagrama
+     */
     private String padraoGafro(){
         String auxReturn = "";
         auxReturn += "\n"+"\t" +"label = \"" + this.getLabel() + "\"" +'\n' +
                 "\t" +"labelloc=" + " " + this.getLabelLoc() +";\n" +
                 "\t" +"rankdir=" + " " + this.getRankdir() +";\n" +
                 "\n"+
-                "\t" +"node " + "[labelloc=" +node.getLABELLOCPADRAONODE() + " fontsize=" + node.getFONTEPADRAO() +  " shape=" + node.getSHAPEPADRAO() + "]\n";
+                "\t" +"node " + "[labelloc=" +node.getLABELLOCPADRAONODE() + " fontsize=" + node.getFONTEPADRAO() +  " shape=" + node.getSHAPEPADRAO() + "]\n"+
+                "\t" +"edge " + "[color=" +node.getCORPADRAO()+"]";
+
         return auxReturn;
     }
+
+    /**
+     * método interno
+     * @return o padrão do subgrafo a ser gerado no diagrama
+     */
     private String getPadraoSubGrafo(){
         String auxReturn = "";
         for(SubGrafo aux : this.subGraph){
@@ -252,18 +377,24 @@ public class Grafo {
         return auxReturn;
     }
 
-
-
-    public String exportarFormatoDot(){
-        return "";
+    /**
+     *
+     * @param nomeNode recebe nome do nó
+     * @return true caso o nó exista, false caso não exista.
+     */
+    private boolean verificaNodeExiste(String nomeNode){
+        for(Node aux : nos){
+            if(aux.getNomeNode().equals(nomeNode)){
+                return true;
+            }
+        }
+        return false;
     }
-    public void salvarDiagramaNoDisco(String nomeDoArquivo, ArrayList<Grafo> grafo) {
 
-    }
-    public void lerDiagramaDoDisco(String nomeDoArquivo) {
-
-    }
-
+    /**
+     *
+     * @return um grafo no formato dot
+     */
     @Override
     public String toString() {
         return "graph "+ this.getLabel().toLowerCase().replace(" ","") +"{" +

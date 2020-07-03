@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36fbebee-5c5b-47d5-ae6b-edef0320d2ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/poo/SubGrafo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/poo/teste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/EndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/EndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Firewall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Firewall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Grafo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Internet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Internet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Roteador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Roteador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/poo/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/poo/Switch.java" afterDir="false" />
+    <list default="true" id="ce38ddac-3614-49ba-a82b-88fdea95b2bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Solucao.md" beforeDir="false" afterPath="$PROJECT_DIR$/Solucao.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +17,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -38,19 +32,24 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1dTGxJK85gDBWzuqotsr7ohmCGT" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\renan\IdeaProjects\2020-01-projeto-pratico-02-renaner123\Diagrama\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eBfjXJKiLYiAEtLnrtrkqQAqux" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -61,11 +60,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Classroom/lista-06/Gerador" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="poo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\renan\IdeaProjects\2020-01-projeto-pratico-02-renaner123\Diagrama" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Principal">
     <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="poo.Principal" />
       <module name="Diagrama.main" />
@@ -79,9 +90,93 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GrafoTest.validarNAssociacoes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;poo.GrafoTest.validarNAssociacoes&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GrafoTest.validarRestricoesInternet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;poo.GrafoTest.validarRestricoesInternet&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GrafoTest.validarRestricoesRouter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;poo.GrafoTest.validarRestricoesRouter&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GrafoTest.validarRestricoesSwitch" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;poo.GrafoTest.validarRestricoesSwitch&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Principal" />
+        <item itemvalue="Gradle.GrafoTest.validarNAssociacoes" />
+        <item itemvalue="Gradle.GrafoTest.validarRestricoesInternet" />
+        <item itemvalue="Gradle.GrafoTest.validarRestricoesRouter" />
+        <item itemvalue="Gradle.GrafoTest.validarRestricoesSwitch" />
       </list>
     </recent_temporary>
   </component>
@@ -90,36 +185,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="36fbebee-5c5b-47d5-ae6b-edef0320d2ce" name="Default Changelist" comment="" />
-      <created>1592441915013</created>
+      <changelist id="ce38ddac-3614-49ba-a82b-88fdea95b2bb" name="Default Changelist" comment="" />
+      <created>1593800042005</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592441915013</updated>
-      <workItem from="1592441917024" duration="3561000" />
-      <workItem from="1592479373061" duration="4002000" />
-      <workItem from="1592485894317" duration="3348000" />
-      <workItem from="1592494896790" duration="3079000" />
-      <workItem from="1592500899819" duration="10246000" />
-      <workItem from="1592515345376" duration="355000" />
-      <workItem from="1592520534555" duration="9120000" />
-      <workItem from="1592532511106" duration="10000" />
-      <workItem from="1592533508943" duration="140000" />
-      <workItem from="1592587559889" duration="16991000" />
-      <workItem from="1592674150742" duration="17567000" />
-      <workItem from="1592696567590" duration="53000" />
-      <workItem from="1592696916347" duration="701000" />
-      <workItem from="1592958627726" duration="16000" />
-      <workItem from="1592958866713" duration="4348000" />
-      <workItem from="1592997660223" duration="4681000" />
-      <workItem from="1593018245925" duration="3038000" />
-      <workItem from="1593030375635" duration="14110000" />
-      <workItem from="1593084177344" duration="7258000" />
-      <workItem from="1593126899553" duration="3747000" />
-      <workItem from="1593178624522" duration="6850000" />
-      <workItem from="1593202621413" duration="3848000" />
-      <workItem from="1593209506794" duration="5999000" />
-      <workItem from="1593289691663" duration="17660000" />
-      <workItem from="1593307929182" duration="66000" />
+      <updated>1593800042005</updated>
+      <workItem from="1593800044557" duration="7427000" />
+      <workItem from="1593814600531" duration="46000" />
     </task>
     <servers />
   </component>
@@ -127,73 +199,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1593214675647">
+    <state x="547" y="163" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593800519516">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1593214675647" />
-    <state x="496" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592509923863">
+    <state x="547" y="163" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860@0.0.1600.860" timestamp="1593800519516" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1593800518479">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="496" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1592509923863" />
-    <state x="423" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593039090037">
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593800518479" />
+    <state width="1557" height="186" key="GridCell.Tab.0.bottom" timestamp="1593814328320">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="423" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1593039090037" />
-    <state x="441" y="83" width="440" height="633" key="FileChooserDialogImpl" timestamp="1592691257430">
+    <state width="1557" height="186" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1593814328320" />
+    <state width="1557" height="186" key="GridCell.Tab.0.center" timestamp="1593814328319">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="441" y="83" width="440" height="633" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1592691257430" />
-    <state width="1557" height="151" key="GridCell.Tab.0.bottom" timestamp="1593307995035">
+    <state width="1557" height="186" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1593814328319" />
+    <state width="1557" height="186" key="GridCell.Tab.0.left" timestamp="1593814328319">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="151" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1593307995035" />
-    <state width="1557" height="151" key="GridCell.Tab.0.center" timestamp="1593307995035">
+    <state width="1557" height="186" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1593814328319" />
+    <state width="1557" height="186" key="GridCell.Tab.0.right" timestamp="1593814328319">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="151" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1593307995035" />
-    <state width="1557" height="151" key="GridCell.Tab.0.left" timestamp="1593307995035">
+    <state width="1557" height="186" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1593814328319" />
+    <state x="301" y="72" key="SettingsEditor" timestamp="1593800077345">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="151" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1593307995035" />
-    <state width="1557" height="151" key="GridCell.Tab.0.right" timestamp="1593307995035">
+    <state x="301" y="72" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1593800077345" />
+    <state x="564" y="133" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593800202040">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="151" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1593307995035" />
-    <state width="1557" height="194" key="GridCell.Tab.1.bottom" timestamp="1593307906787">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="194" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1593307906787" />
-    <state width="1557" height="194" key="GridCell.Tab.1.center" timestamp="1593307906786">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="194" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1593307906786" />
-    <state width="1557" height="194" key="GridCell.Tab.1.left" timestamp="1593307906786">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="194" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1593307906786" />
-    <state width="1557" height="194" key="GridCell.Tab.1.right" timestamp="1593307906786">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="194" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1593307906786" />
-    <state x="301" y="72" key="SettingsEditor" timestamp="1592443828028">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="301" y="72" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1592443828028" />
-    <state x="819" y="179" key="extract.method.dialog" timestamp="1593305678120">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="819" y="179" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1593305678120" />
-    <state x="496" y="28" width="607" height="804" key="find.popup" timestamp="1592679474493">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="496" y="28" width="607" height="804" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1592679474493" />
-    <state x="542" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1592609577259">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="542" y="49" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1592609577259" />
-    <state x="456" y="195" width="672" height="677" key="run.anything.popup" timestamp="1593304189018">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="456" y="195" width="672" height="677" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1593304189018" />
+    <state x="564" y="133" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1600.860@0.0.1600.860" timestamp="1593800202040" />
   </component>
 </project>
