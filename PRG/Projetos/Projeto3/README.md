@@ -1,6 +1,7 @@
 ## Limpador de dados
 
 ## Executando o software
+
    
 > Para executar o programa, abra o terminal do linux e digite o diretório onde se encontra
 o projeto, utilize make para compilar. Na execução, deve ter como primeiro argumento da linha
