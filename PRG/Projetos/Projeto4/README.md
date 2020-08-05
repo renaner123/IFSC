@@ -1,4 +1,3 @@
-
 ## Auto-Completar Palavras
 
 Manual do Usuário
