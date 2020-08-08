@@ -17,7 +17,11 @@
 
 * [Lista 05](Listas/lista-05) - Modelagem de classes com associação
 
+* [Lista 06](lista-06) - Coleções Java, Herança e Testes de unidade
+
+* [Lista 07](lista-07) - Polimorfismo, Enum e Tipos genéricos
+
 * [Projeto 01](Projetos/Projeto1) - Gerador de calendários iCalendar
 
-
+* [Projeto 02](Projetos/Projeto2) -Gerador de diagramas de redes
 
