@@ -1,9 +1,9 @@
 
 ## Listas
 
-* [Lista 01](lista-01/lista-01.md) - Modelo Entidade-Relacionamento
-* [Lista 02](lista-02/lista-02.md) - Modelo relacional
-* [Lista 03](lista-03/lista-03.md) - Normalização
+* [Lista 01](lista-01/Readme.md) - Modelo Entidade-Relacionamento
+* [Lista 02](lista-02/Readme.md) - Modelo relacional
+* [Lista 03](lista-03/Readme.md) - Normalização
 
 ### Observações
 
